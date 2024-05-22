@@ -1,0 +1,106 @@
+@import url(reset.css);
+@import url("https://use.typekit.net/jqe2tos.css");
+
+:root{
+    --background-color: #090D0B;
+    --gray-one: #D7D9D8;
+    --gray-two: #A6A39F;
+    --white-one: #F2F2F2;
+    --cor-destaque: rgb(173,9,12);
+}
+
+body{
+    color: var(--white-one);
+    font-family: "tassista", sans-serif;
+    background-color: var(--white-one);
+}
+
+.content-header{
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header{
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+}
+
+.list-item{
+    display: flex;
+    gap: 1rem;
+}
+
+.title-item{
+    font-size: 1.6rem;
+}
+
+.link-item{
+    text-decoration: none;
+    color: var(--white-one);
+}
+
+.link-item:hover{
+    color: var(--cor-destaque);
+}
+
+.icon-image{
+    width: 16rem;
+    object-fit: cover;
+}
+
+.container-main {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.content-carrosel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-carrosel {
+    margin-bottom: 20px;
+}
+
+.carrosel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.content {
+    min-width: 100%;
+    text-align: center;
+    display: none; /* Hide all content initially */
+    color: #090D0B;
+}
+
+.content.active {
+    display: block; /* Show only active content */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
