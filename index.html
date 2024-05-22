@@ -23,56 +23,75 @@
         </div>
     </header>
     <main>
-        <div class="content-main">
-            <!-- Carrossel 1 -->
-            <div class="container-main" id="carrosel1">
-                <div class="content-carrosel">
-                    <h1 class="title-carrosel">Missão</h1>
-                    <div class="carrosel-inner">
-                        <h2 class="content">conteúdo missão</h2>
-                        <h2 class="content">conteúdo missão 2</h2>
-                        <h2 class="content">conteúdo missão 3</h2>
-                        <h2 class="content">conteúdo missão 4</h2>
-                        <h2 class="content">conteúdo missão 5</h2>
-                    </div>
+        <div class="left">
+            <div class="carrossel" id="carrosel1">
+                <div class="carrossel-inner">
+                    <div class="carrossel-item">Missão - Página 1</div>
+                    <div class="carrossel-item">Missão - Página 2</div>
+                    <div class="carrossel-item">Missão - Página 3</div>
+                    <div class="carrossel-item">Missão - Página 4</div>
+                    <div class="carrossel-item">Missão - Página 5</div>
                 </div>
-                <button class="prev" onclick="movePrev('carrosel1')">Prev</button>
-                <button class="next" onclick="moveNext('carrosel1')">Next</button>
+                <div class="carrossel-buttons">
+                    <button class="carrossel-button prev" data-target="carrosel1">Prev</button>
+                    <button class="carrossel-button next" data-target="carrosel1">Next</button>
+                </div>
             </div>
-    
-            <!-- Carrossel 2 -->
-            <div class="container-main" id="carrosel2">
-                <div class="content-carrosel">
-                    <h1 class="title-carrosel">Visão</h1>
-                    <div class="carrosel-inner">
-                        <h2 class="content">conteúdo visão</h2>
-                        <h2 class="content">conteúdo visão 2</h2>
-                        <h2 class="content">conteúdo visão 3</h2>
-                        <h2 class="content">conteúdo visão 4</h2>
-                        <h2 class="content">conteúdo visão 5</h2>
-                    </div>
+            <div class="carrossel" id="carrosel2">
+                <div class="carrossel-inner">
+                    <div class="carrossel-item">Visão - Página 1</div>
+                    <div class="carrossel-item">Visão - Página 2</div>
+                    <div class="carrossel-item">Visão - Página 3</div>
+                    <div class="carrossel-item">Visão - Página 4</div>
+                    <div class="carrossel-item">Visão - Página 5</div>
                 </div>
-                <button class="prev" onclick="movePrev('carrosel2')">Prev</button>
-                <button class="next" onclick="moveNext('carrosel2')">Next</button>
+                <div class="carrossel-buttons">
+                    <button class="carrossel-button prev" data-target="carrosel2">Prev</button>
+                    <button class="carrossel-button next" data-target="carrosel2">Next</button>
+                </div>
             </div>
-    
-            <!-- Carrossel 3 -->
-            <div class="container-main" id="carrosel3">
-                <div class="content-carrosel">
-                    <h1 class="title-carrosel">Valores</h1>
-                    <div class="carrosel-inner">
-                        <h2 class="content">conteúdo valores</h2>
-                        <h2 class="content">conteúdo valores 2</h2>
-                        <h2 class="content">conteúdo valores 3</h2>
-                        <h2 class="content">conteúdo valores 4</h2>
-                        <h2 class="content">conteúdo valores 5</h2>
-                    </div>
+            <div class="carrossel" id="carrosel3">
+                <div class="carrossel-inner">
+                    <div class="carrossel-item">Valores - Página 1</div>
+                    <div class="carrossel-item">Valores - Página 2</div>
+                    <div class="carrossel-item">Valores - Página 3</div>
+                    <div class="carrossel-item">Valores - Página 4</div>
+                    <div class="carrossel-item">Valores - Página 5</div>
                 </div>
-                <button class="prev" onclick="movePrev('carrosel3')">Prev</button>
-                <button class="next" onclick="moveNext('carrosel3')">Next</button>
+                <div class="carrossel-buttons">
+                    <button class="carrossel-button prev" data-target="carrosel3">Prev</button>
+                    <button class="carrossel-button next" data-target="carrosel3">Next</button>
+                </div>
             </div>
         </div>
-    
-    <script src="script.js"></script>
+        <div class="right">
+            <!-- Coloque suas fotos aqui -->
+            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 1">
+            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 2">
+            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 3">
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.carrossel-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const carrossel = document.getElementById(button.dataset.target);
+                const inner = carrossel.querySelector('.carrossel-inner');
+                const items = inner.querySelectorAll('.carrossel-item');
+                const itemWidth = items[0].clientWidth;
+                let currentTranslate = parseInt(inner.style.transform.replace('translateX(', '')) || 0;
+
+                if (button.classList.contains('next')) {
+                    currentTranslate -= itemWidth;
+                    if (currentTranslate < -((items.length - 1) * itemWidth)) currentTranslate = 0;
+                } else {
+                    currentTranslate += itemWidth;
+                    if (currentTranslate > 0) currentTranslate = -((items.length - 1) * itemWidth);
+                }
+
+                inner.style.transform = `translateX(${currentTranslate}px)`;
+            });
+        });
+    </script>
 </body>
 </html>

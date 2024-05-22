@@ -51,56 +51,80 @@ body{
     object-fit: cover;
 }
 
-.container-main {
-    position: relative;
-    width: 300px;
-    margin: 20px auto;
-    overflow: hidden;
-    border: 1px solid #ccc;
+main{
+    display: flex;
+
+    margin-top: 3rem;
 }
 
-.content-carrosel {
+.left, .right {
+    flex: 1;
+    padding: 10px;
+}
+.left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.carrossel {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra nos carrosséis */
+    background-color: white;
+    border-radius: 10px;
+    background-image: url(../images/smoke-overlay-texture.jpg);
+    height: 20rem;
+    background-position: center;
+    background-size: cover;
+}
+#carrosel2 {
+    margin-left: 20px; /* Ajuste conforme necessário para mover o segundo carrossel para a direita */
 }
 
-.title-carrosel {
-    margin-bottom: 20px;
+#carrosel1, #carrosel3{
+    margin-right: 20px;
 }
 
-.carrosel-inner {
+.carrossel-inner {
     display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
+    width: 500%;
+    transition: transform 0.5s ease-in-out;
 }
-
-.content {
-    min-width: 100%;
+.carrossel-item {
+    width: 20%;
+    flex: none;
     text-align: center;
-    display: none; /* Hide all content initially */
-    color: #090D0B;
+    padding: 10px;
 }
-
-.content.active {
-    display: block; /* Show only active content */
-}
-
-button {
+.carrossel-buttons {
     position: absolute;
     top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     transform: translateY(-50%);
-    background-color: #333;
-    color: white;
+}
+.carrossel-button {
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
+    color: white;
     padding: 10px;
     cursor: pointer;
 }
-
-.prev {
-    left: 0;
+.right img {
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra nas imagens */
+    border-radius: 10px; /* Bordas arredondadas para um efeito mais suave */
+}
+.right img:last-child {
+    margin-bottom: 0;
 }
 
-.next {
-    right: 0;
+.right{
+    display: flex;
+    flex-direction: column;
 }
