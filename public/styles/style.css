@@ -79,6 +79,14 @@ main{
     background-position: center;
     background-size: cover;
 }
+
+.title-carrosel{
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
 #carrosel2 {
     margin-left: 20px; /* Ajuste conforme necessário para mover o segundo carrossel para a direita */
 }
@@ -92,8 +100,25 @@ main{
     width: 500%;
     transition: transform 0.5s ease-in-out;
 }
+
+.subtitle-carrosel, .description-carrosel{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.subtitle-carrosel{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.description-carrossel{
+    font-size: 1.8rem;
+}
+
 .carrossel-item {
-    width: 20%;
+    width: 19%;
     flex: none;
     text-align: center;
     padding: 10px;
