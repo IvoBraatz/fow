@@ -1,103 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/styles/style.css">
-    <link rel="shortcut icon" href="public/images/icons/fow.png" type="image/x-icon">
-    <title>Fow Garage</title>
+    <title>Clube Automobilístico - Início</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header>
-        <div class="content-header">
-            <div class="container-header">
-                <a href=""><img class="icon-image" src="public/images/icons/fow.png" alt=""></a>
-            </div>
-            <div class="container-header">
-                <ul class="list-item">
-                    <li class="title-item"><a class="link-item" href=""><p>Missão</p></a></li>
-                    <li class="title-item"><a class="link-item" href=""><p>Visão</p></a></li>
-                    <li class="title-item"><a class="link-item" href=""><p>Valores</p></a></li>
-                </ul>
-            </div>
+        <div class="logo">
+            <img class="logo-img" src="assets/img/logo/LOGO - fow.PNG" alt="">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="meetings.html">Encontros</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="partners.html">Parceiros</a></li>
+                <li><a href="members.html">Membros</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
-        <div class="left">
-            <div class="carrossel" id="carrosel1">
-                <h1 class="title-carrosel">Missão</h1>
-                <div class="carrossel-inner">
-                    <div class="carrossel-item">
-                        <h2 class="subtitle-carrosel">são os princípios e a conduta.</h2>
-                        <h2 class="description-carrossel">que a empresa deseja seguir para alcançar os objetivos</h2>
-                    </div>
-                    <div class="carrossel-item">Missão - Página 2</div>
-                    <div class="carrossel-item">Missão - Página 3</div>
-                    <div class="carrossel-item">Missão - Página 4</div>
-                    <div class="carrossel-item">Missão - Página 5</div>
-                </div>
-                <div class="carrossel-buttons">
-                    <button class="carrossel-button prev" data-target="carrosel1">Prev</button>
-                    <button class="carrossel-button next" data-target="carrosel1">Next</button>
-                </div>
+        <section class="hero">
+            <h2>Bem-vindo ao Clube Automobilístico</h2>
+            <p>Seu destino para carros clássicos e exclusivos.</p>
+        </section>
+        
+        <section class="car-list">
+            <h2>Nosso Acervo</h2>
+            <div class="car-item">
+                <img src="assets/images/car1.jpg" alt="Carro 1">
+                <h3>Carro Clássico 1</h3>
+                <p>Descrição do carro clássico 1.</p>
             </div>
-            <div class="carrossel" id="carrosel2">
-                <h1 class="title-carrosel">Visão</h1>
-                <div class="carrossel-inner">
-                    <div class="carrossel-item">Visão - Página 1</div>
-                    <div class="carrossel-item">Visão - Página 2</div>
-                    <div class="carrossel-item">Visão - Página 3</div>
-                    <div class="carrossel-item">Visão - Página 4</div>
-                    <div class="carrossel-item">Visão - Página 5</div>
-                </div>
-                <div class="carrossel-buttons">
-                    <button class="carrossel-button prev" data-target="carrosel2">Prev</button>
-                    <button class="carrossel-button next" data-target="carrosel2">Next</button>
-                </div>
+            <div class="car-item">
+                <img src="assets/images/car2.jpg" alt="Carro 2">
+                <h3>Carro Clássico 2</h3>
+                <p>Descrição do carro clássico 2.</p>
             </div>
-            <div class="carrossel" id="carrosel3">
-                <h1 class="title-carrosel">Valores</h1>
-                <div class="carrossel-inner">
-                    <div class="carrossel-item">Valores - Página 1</div>
-                    <div class="carrossel-item">Valores - Página 2</div>
-                    <div class="carrossel-item">Valores - Página 3</div>
-                    <div class="carrossel-item">Valores - Página 4</div>
-                    <div class="carrossel-item">Valores - Página 5</div>
-                </div>
-                <div class="carrossel-buttons">
-                    <button class="carrossel-button prev" data-target="carrosel3">Prev</button>
-                    <button class="carrossel-button next" data-target="carrosel3">Next</button>
-                </div>
+            <div class="car-item">
+                <img src="assets/images/car3.jpg" alt="Carro 3">
+                <h3>Carro Clássico 3</h3>
+                <p>Descrição do carro clássico 3.</p>
             </div>
-        </div>
-        <div class="right">
-            <!-- Coloque suas fotos aqui -->
-            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 1">
-            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 2">
-            <img src="public/images/smoke-overlay-texture.jpg" alt="Foto 3">
-        </div>
+        </section>
     </main>
-
-    <script>
-        document.querySelectorAll('.carrossel-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const carrossel = document.getElementById(button.dataset.target);
-                const inner = carrossel.querySelector('.carrossel-inner');
-                const items = inner.querySelectorAll('.carrossel-item');
-                const itemWidth = items[0].clientWidth;
-                let currentTranslate = parseInt(inner.style.transform.replace('translateX(', '')) || 0;
-
-                if (button.classList.contains('next')) {
-                    currentTranslate -= itemWidth;
-                    if (currentTranslate < -((items.length - 1) * itemWidth)) currentTranslate = 0;
-                } else {
-                    currentTranslate += itemWidth;
-                    if (currentTranslate > 0) currentTranslate = -((items.length - 1) * itemWidth);
-                }
-
-                inner.style.transform = `translateX(${currentTranslate}px)`;
-            });
-        });
-    </script>
+    
+    <footer>
+        <p>&copy; 2024 Clube Automobilístico. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #181717;
+    --secondary-color: #fff;
+    --accent-color: #f4f4f4;
+    --hover-color: #555;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    margin-left: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1em;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+.hero {
+    background: url('../img/bg/bg1.jpg') no-repeat center center/cover;
+    color: var(--secondary-color);
+    padding: 4em 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.car-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.car-item {
+    background: var(--secondary-color);
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.content {
+    padding: 2em;
+    background: var(--secondary-color);
+    margin: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo-img{
+    width: 10rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
