@@ -26,26 +26,126 @@
     
     <main>
         <section class="hero">
-            <h2>Bem-vindo ao Clube Automobilístico</h2>
-            <p>Seu destino para carros clássicos e exclusivos.</p>
+            <img class="logo-img" src="assets/img/logo/LOGO - fow.PNG" alt="">
+            <h1 class="section-title">
+                Follow the winners
+            </h1>
         </section>
         
-        <section class="car-list">
-            <h2>Nosso Acervo</h2>
-            <div class="car-item">
-                <img src="assets/images/car1.jpg" alt="Carro 1">
-                <h3>Carro Clássico 1</h3>
-                <p>Descrição do carro clássico 1.</p>
+        <section class="sliders">
+            <h2 class="section-title">Sobre nós</h2>
+            <div class="container">
+                <div class="slider-card" id="slider1">
+                    <button class="prev" onclick="moveSlider('slider1', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Valores</h1>
+                                <h2 class="text-slider"><strong class="bold-text">São os princípios e a conduta.</strong><br>
+                                que a empresa deseja seguir para alcançar os objeticos traçados</h2>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Valor 01:</h1>
+                                <h2 class="text-slider">Ser um grupo de carros responsável com a comunidade</h2>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Valor 02:</h1>
+                                <h2 class="text-slider">Elaborar campanhas e projetos exporádicos sem fins lucrativos.</h2>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Valor 03:</h1>
+                                <h2 class="text-slider">Incentivar os corajosos a serem diferentes dos outros.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlider('slider1', 1)">&#10095;</button>
+                </div>
+                <div class="slider-card" id="slider2">
+                    <button class="prev" onclick="moveSlider('slider2', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Visão</h1>
+                                <h2 class="text-slider"><strong class="bold-text">Indica onde a empresa deseja chegar no futuro</strong><br>
+                                ou seja, é aquilo que faz o negocio continuar existindo.</h2>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Visão</h1>
+                                <h2 class="text-slider">ser um grupo de carros reconhecido pelo seu diferencial em abraçar todos os estilos e gostos.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlider('slider2', 1)">&#10095;</button>
+                </div>
+                <div class="slider-card" id="slider3">
+                    <button class="prev" onclick="moveSlider('slider3', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Missão</h1>
+                                <h2 class="text-slider"><strong class="bold-text">Representa o propósito</strong><br>
+                                da empresa, ou seja, sua razão de existir</h2>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div>
+                                <h1 class="title-slider">Nossa missão é</h1>
+                                <h2 class="text-slider">reunir bons amigos nos encontros de carros, em pró de gerar experiências, risadas e boas memórias.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlider('slider3', 1)">&#10095;</button>
+                </div>
             </div>
-            <div class="car-item">
-                <img src="assets/images/car2.jpg" alt="Carro 2">
-                <h3>Carro Clássico 2</h3>
-                <p>Descrição do carro clássico 2.</p>
+        </section>
+        <section>
+            <div class="content-element">
+                <h1 class="section-title">Requisitos para particiar da FOW</h1>
+                <div class="container-content">
+                    <img class="container-image" src="assets/img/bg/bg2.jpg" alt="">
+                    <div class="contents">
+                        
+                        <div class="content">
+                            <p class="description"><strong class="bold-text">ser um apaixonado</strong> pelo universo de carros. não importa qual você tenha</p>
+                        </div>
+                        <div class="content"><p class="description">
+                            <strong class="bold-text">Ser um morador</strong> do Vale do Itajaí. Desta forma você pode participar dos encontros!</p>
+    
+                        </div>
+                        <div class="content"><p class="description">
+                            <strong class="bold-text">Ter responsabilidade.</strong> Não somos um grupo de baderneiros.</p>
+    
+                        </div>
+                        <div class="content"><p class="description">
+                            <strong class="bold-text">Esteja disposto a aprender.</strong> nenhum sabe mais que o outro!</p>
+    
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="car-item">
-                <img src="assets/images/car3.jpg" alt="Carro 3">
-                <h3>Carro Clássico 3</h3>
-                <p>Descrição do carro clássico 3.</p>
+            <div class="content-element">
+                <h1 class="section-title">Acesse nossa loja</h1>
+                <div class="container-content">
+                    
+                    <div class="contents">
+                        
+                        <div class="content">
+                            <p class="description">Adquira já a sua peça personalizada da FOW garage!</p>
+                        </div>
+                       <img src="assets/img/bg/acf.png" alt="" class="content-image">
+                       <img src="assets/img/bg/acf2.png" alt="" class="content-image">
+
+                    </div>
+                    <img class="container-image" src="assets/img/bg/bg3.jpg" alt="">
+                </div>
             </div>
         </section>
     </main>
