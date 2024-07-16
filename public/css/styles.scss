@@ -22,6 +22,7 @@ $box-shadow: rgba(0, 0, 0, 0.5);
 
 html {
     scrollbar-width: none;
+    scroll-behavior: smooth;
     scrollbar-color: transparent transparent;
 }
 
@@ -71,7 +72,6 @@ body {
     .nav-links {
         list-style: none;
         display: flex;
-        gap: 20px;
 
         li {
             display: inline;
@@ -80,7 +80,7 @@ body {
         a {
             color: $color-navbar-text;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 5px 2px;
             transition: background 0.3s;
         }
 
@@ -249,10 +249,16 @@ body {
     .social-links {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         flex-wrap: wrap;
 
         .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: .5rem;
             color: $color-navbar-text;
             background-color: $color-content-background;
             padding: 10px 20px;
@@ -263,6 +269,10 @@ body {
             &:hover {
                 background-color: $color-button-hover;
                 transform: scale(1.1);
+            }
+
+            .link-image{
+                width: 1rem;
             }
         }
     }
@@ -278,6 +288,12 @@ body {
         margin: 0;
         font-size: 0.9em;
         color: $color-content-text;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .nav-links{
+        gap: 1rem;
     }
 }
 
@@ -297,17 +313,18 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .nav-links {
-        display: none; // Oculta links da navbar em telas menores
+    .header{
+        display: flex;
         flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
         align-items: center;
         gap: 10px;
-        position: absolute;
         top: 80px;
         left: 0;
         right: 0;
-        background: $color-navbar-background;
-        box-shadow: 0 2px 10px $box-shadow;
         border-radius: 5px;
 
         li {
@@ -328,6 +345,8 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+
+
     .hero-section {
         height: 70vh; // Ajusta altura do hero-section em telas menores
     }
