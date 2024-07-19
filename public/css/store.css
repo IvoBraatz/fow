@@ -1,0 +1,21 @@
+.store-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.loading{
+    font-size: 3rem;
+    color: brown;
+    font-weight: 600;
+    letter-spacing: .4rem;
+}
+
+.store-div a{
+    text-decoration:underline;
+    color: azure;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
